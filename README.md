@@ -1,26 +1,27 @@
-# Micro Frontends Proof of Concept 
-
+# micro-frontends (angular,react) PoC
 ## Goals
-* create portal-like application with top-header and left-side navigation bar
-navigation bar has links that open sub-applications
-* each sub-application can be implemented in different technology (like Angular 5 and React 16)
-* we can render single sub-application in single page
-* we can render many sub-applications in a single page
-* each sub-application can be deployed independently and hosted on different servers
-* CSS stylesheets are independent
-* communication between sub-applications is possible
+* Build a portal-like application featuring a top-header and left-side navigation bar.
+* Enable the navigation bar to link to sub-applications.
+* Implement sub-applications using different technologies, such as Angular 5 and React 16.
+* Allow rendering of a single sub-application on a single page.
+* Support rendering of multiple sub-applications on a single page.
+* Enable each sub-application to be independently deployable and hosted on different servers.
+* Ensure that CSS stylesheets are independent.
+* Enable communication between sub-applications.
 
 
 ## Modules
 
 ### sub-app-angular    
-Angular 5 application. It a sub-application of the portal.
+
+This module represents an Angular 5 application and serves as a sub-application within the portal.
     
 ### sub-app-react16
-React 16 application. It a sub-application of the portal.
+This module represents a React 16 application and serves as a sub-application within the portal.
 
 ### main-app
- React 15 application. It is a template application, which aggregates **sub-app-angular** and **sub-app-react16** as a portal.
+This module represents a React 15 application, acting as a template application that aggregates **sub-app-angular** and **sub-app-react16** into a portal.
+
 
 ## Deployment
 ### sub-app-angular
@@ -30,7 +31,7 @@ npm install
 npm run build
 npm run serve
 ~~~~
-Now bundles are available here: http://localhost:3001
+Access the bundles at: http://localhost:3001
 ### sub-app-react16
 ~~~~
 cd sub-app-react16
@@ -38,7 +39,7 @@ npm install
 npm run open
 npm run serve
 ~~~~
-* Now bundles are available here: http://localhost:3002/
+* Access the bundles at: http://localhost:3002/
 * CDN will be available at http://localhost:3002/static/js/openbundle.js
 
 ### main-app
@@ -48,6 +49,6 @@ npm install
 npm run build
 npm run serve
 ~~~~
-Now the application is available here: [http://localhost:3000](http://localhost:3000)
+Access the application at: [http://localhost:3000](http://localhost:3000)
 
 You can also see sub-app-react16 seperately by opening `index.html` inside `standalone` directory. 
